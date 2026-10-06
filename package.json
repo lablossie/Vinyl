@@ -1,0 +1,9 @@
+{
+  "name": "platenkast",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Platenkast - AI-ondersteunde platencollectie app",
+  "dependencies": {
+    "@vercel/kv": "^1.0.1"
+  }
+}

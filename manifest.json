@@ -1,0 +1,17 @@
+{
+  "name": "Platenkast - AI Platencollectie",
+  "short_name": "Platenkast",
+  "description": "Houd je vinylcollectie bij met AI-hoesherkenning",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#161210",
+  "theme_color": "#161210",
+  "orientation": "portrait",
+  "lang": "nl",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
