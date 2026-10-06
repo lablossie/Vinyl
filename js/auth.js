@@ -32,7 +32,7 @@
   function enterApp() {
     authScreen.hidden = true;
     appShell.hidden = false;
-    window.App && window.App.start();
+    App.start();
   }
 
   form.addEventListener('submit', async (e) => {
