@@ -20,7 +20,7 @@ const State = (() => {
 
   async function apiFetch(path, opts = {}) {
     const headers = Object.assign({ 'Content-Type': 'application/json', 'x-app-pin': getPin() }, opts.headers || {});
-    const res = await fetch(path, Object.assign({}, opts, { headers }));
+    const res = await fetch(path, Object.assign({ cache: 'no-store' }, opts, { headers }));
     if (res.status === 401) {
       clearPin();
       throw new Error('UNAUTHORIZED');

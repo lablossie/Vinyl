@@ -7,6 +7,10 @@ const { getRecords, setRecords } = require('../lib/kv');
 const SEED_RECORDS = require('../js/data/seedRecords');
 
 module.exports = async function handler(req, res) {
+  // Nooit cachen: dit endpoint controleert de pincode en geeft persoonlijke
+  // data terug, dus elk verzoek moet echt de server bereiken.
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+
   if (!checkPin(req, res)) return;
 
   try {

@@ -5,6 +5,7 @@
 const { checkPin } = require('../lib/pin');
 
 module.exports = async function handler(req, res) {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
   if (!checkPin(req, res)) return;
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');

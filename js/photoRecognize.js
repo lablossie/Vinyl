@@ -5,6 +5,7 @@ const PhotoRecognize = (() => {
   async function recognize(base64Image) {
     const res = await fetch('/api/recognize', {
       method: 'POST',
+      cache: 'no-store',
       headers: { 'Content-Type': 'application/json', 'x-app-pin': State.getPin() },
       body: JSON.stringify({ image: base64Image })
     });
