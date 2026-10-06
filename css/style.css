@@ -11,6 +11,10 @@
   --amber-bright: #d9742f;
 }
 
+/* Zorgt dat een element met het "hidden"-attribuut ook echt verborgen is,
+   ook als een eigen regel hieronder (zoals .auth-screen) "display" instelt. */
+[hidden] { display: none !important; }
+
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; padding: 0; background: var(--bg); color: var(--cream); font-family: 'Inter', system-ui, sans-serif; height: 100%; }
 body { overscroll-behavior-y: none; }
